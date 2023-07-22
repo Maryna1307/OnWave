@@ -1,0 +1,142 @@
+@import 'normalize';
+@import 'vars';
+@import 'mixins';
+@import 'extends';
+@import 'burger';
+@import 'slider';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: $color_black;
+}
+
+img {
+    display: block;
+}
+
+.container {
+    max-width: 1198px;
+    margin: 0 auto;
+}
+
+.d-flex {
+    @include flex(space-between, center, 0);
+}
+
+.title {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+
+    &_2 {
+        max-width: 400px;
+        font-size: 2.5em;
+    }
+}
+
+.btn {
+    @extend %btn;
+
+    &_black {
+        border-color: $color_black;
+        color: $color_black;
+    }
+
+    &:hover {
+        border: 2px solid $color_tomato-light;
+        background: $color_tomato-light;
+        color: #ffffff;
+    }
+}
+
+.header {
+    background: $color_brown-light;
+
+    .menu {
+        @include flex(center, center, 15px);
+        list-style: none;
+
+        &__item {
+            padding: 28px 15px;
+
+            &:hover {
+                background: $color_tomato-light;
+            }
+
+            &:hover .menu__link {
+                color: #ffffff;
+            }
+        }
+
+        &__link {
+            color: $color_black;
+            text-decoration: none;
+        }
+    }
+
+        .icons-panel {
+            @include flex(center, center, 30px)
+    }
+}
+
+.arivals {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 0;
+    text-align: center;
+
+    & article:nth-of-type(1) {
+        margin-left: 0;
+    }
+
+    .goods {
+        width: 224px;
+        border: 1px solid $color_brown-light;
+        margin-bottom: 53px;
+        padding-bottom: 20px;
+        margin-left: 15px;
+
+
+        .availability {
+            display: block;
+            max-width: 60px;
+            font-size: 0.5em;
+            text-transform: uppercase;
+            color: $color_brown-light;
+            background-color: $color_tomato-light;
+            padding: 4px 5.5px;
+        }
+
+        .sold {
+            background: $color_brown-light;
+            color: $color_black;
+        }
+
+        &__sold {
+            border: 1px solid $color_tomato-light;
+        }
+
+        &__img {
+            margin: 0 auto 18px;
+        }
+
+        &__name {
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        &__price {
+            font-size: 1.2em;
+            font-weight: 700;
+        }
+    }
+}
