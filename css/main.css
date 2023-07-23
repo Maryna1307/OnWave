@@ -348,6 +348,7 @@ img {
 .container {
   max-width: 1198px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .d-flex {
@@ -473,6 +474,7 @@ img {
 .footer__container {
   max-width: 1142px;
   margin: 0 auto;
+  padding: 0 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -529,4 +531,25 @@ img {
   text-align: center;
   font-size: 0.7em;
   color: #F8F1EA;
+}
+
+@media screen and (max-width: 992px) {
+  html, body {
+    font-size: 16px;
+  }
+  .header .logo__img {
+    width: 168px;
+  }
+  .header .menu {
+    gap: 0;
+  }
+  .header .menu__item {
+    padding: 28px 15px;
+  }
+  .icons-panel {
+    gap: 20px;
+  }
+  .icons-panel__img {
+    width: 27px;
+  }
 }

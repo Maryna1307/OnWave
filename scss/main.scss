@@ -25,6 +25,7 @@ img {
 .container {
     max-width: 1198px;
     margin: 0 auto;
+    padding: 0 15px
 }
 
 .d-flex {
@@ -167,6 +168,7 @@ img {
     &__container {
         max-width: 1142px;
         margin: 0 auto;
+        padding: 0 15px;
         @include flex(space-between, center, 0)
     }
 
@@ -232,3 +234,30 @@ img {
     }
 }
 
+@media screen and (max-width: 992px) {
+    html, body {
+        font-size: 16px;
+    }
+    .header {
+        .logo__img {
+            width: 168px;
+        }
+
+        .menu {
+            gap: 0;
+        }
+
+        .menu__item {
+            padding: 28px 15px;
+        }
+    }
+
+    .icons-panel {
+        gap: 20px;
+
+        &__img {
+            width: 27px;
+        }
+    }
+
+}
