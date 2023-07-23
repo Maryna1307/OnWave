@@ -13,9 +13,16 @@ $(document).ready(function(){
 
   $(document).ready(function(){
     $('.slider').slick({
-        slidesToShow: 4,
+        slidesToShow: 5,
         slidesToScroll: 1,
       });
   })
   
- 
+  $(document).ready(function(){
+    $('.partners__slider').slick({
+        slidesToShow: 9,
+        slidesToScroll: 1,
+        centerMode: true
+      });
+  })
+

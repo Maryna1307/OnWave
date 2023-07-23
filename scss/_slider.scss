@@ -46,7 +46,7 @@
 
     button {
         font-size: 0;
-        background: $_color_dot-inactive;
+        background: $color_dot-inactive;
         width: 20px;
         height: 20px;
         padding: 0;
@@ -86,4 +86,18 @@
     &::before {
         content: url(../assets/svg/sprite/next_arrow.svg);
     }
+}
+
+.slick-track {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.slider .slick-track {
+    gap: 20px;
+}
+
+.first-screen .slick-track {
+    gap: 0;
 }
