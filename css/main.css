@@ -410,6 +410,9 @@ img {
   align-items: center;
   gap: 30px;
 }
+.header .icon-panel__img {
+  width: 36px;
+}
 
 .arivals {
   max-width: 1400px;
@@ -546,10 +549,108 @@ img {
   .header .menu__item {
     padding: 28px 15px;
   }
-  .icons-panel {
+  .header .icons-panel {
     gap: 20px;
   }
-  .icons-panel__img {
+  .header .icon-panel__img {
     width: 27px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 20px 0;
+  }
+  .header .d-flex_burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 38px;
+    flex-direction: row-reverse;
+  }
+  .header .menu {
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    z-index: 5;
+    top: 80px;
+    right: 15px;
+    width: 170px;
+    background-color: rgba(0, 0, 0, 0.7725490196);
+    box-shadow: 1px 3px 7px 1px #202323;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    opacity: 0;
+  }
+  .header .menu__item {
+    width: 100%;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #F8F1EA;
+  }
+  .header .menu__item:last-child {
+    border-bottom: none;
+  }
+  .header .menu__link {
+    color: #F8F1EA;
+  }
+  .header .menu.active {
+    opacity: 1;
+  }
+  .header__burger {
+    display: none;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .header__burger {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 20px;
+    z-index: 6;
+  }
+  .header__burger.active::before {
+    transform: rotate(45deg);
+    transition: 0.5s;
+    width: 30px;
+    top: 9px;
+  }
+  .header__burger.active::after {
+    transform: rotate(-45deg);
+    transition: 0.5s;
+    width: 30px;
+    bottom: 9px;
+  }
+  .header__burger span {
+    position: absolute;
+    top: 9px;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #000;
+  }
+  .header__burger span.hide {
+    opacity: 0;
+  }
+  .header__burger::after, .header__burger::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    background: #000;
+    width: 35px;
+    height: 2px;
+  }
+  .header__burger::before {
+    top: 0;
+  }
+  .header__burger::after {
+    bottom: 0;
+    width: 25px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .first-screen__content {
+    right: 0;
   }
 }
